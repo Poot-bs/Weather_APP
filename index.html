@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class='bx bxs-map'></i>
+            <input id="locationInput" type="text" placeholder="Enter your location">
+            <button id="searchButton"><i class='bx bx-search'></i></button>
+        </div>
+        <div class="weather-box" style="display: none;">
+            <img id="weatherIcon" src="images/cloud.png" alt="Weather Icon">
+            <p id="temperature" class="temperature">16 <span>°C</span></p>
+            <p id="description" class="description">Broken Clouds</p>
+        </div>
+        <div class="weather-details" style="display: none;">
+            <div class="detail-item">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <span id="humidity" class="humidity">0%</span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="detail-item">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <span id="wind" class="wind">0Km/h</span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        <p id="errorMessage" style="display: none; color: red; margin-top: 10px;">City not found. Please try again!</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
